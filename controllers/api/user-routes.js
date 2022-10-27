@@ -2,7 +2,7 @@ const router = require("express").Router();
 const { User } = require("../../models");
 const withAuth = require("../../utils/auth");
 
-router.post("/", withAuth, (req, res) => {
+router.post("/", (req, res) => {
   // expects {username: 'Lernantino', email: 'lernantino@gmail.com', password: 'password1234'}
   User.create({
     username: req.body.username,
@@ -19,7 +19,7 @@ router.post("/", withAuth, (req, res) => {
   });
 });
 
-router.post("/login", withAuth, (req, res) => {
+router.post("/login", (req, res) => {
   User.findOne({
     where: {
       username: req.body.username,
