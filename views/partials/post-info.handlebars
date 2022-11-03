@@ -1,22 +1,13 @@
 <article class="new-post-form">
     <div class="title">
-        <span><a href="/post/{{id}}" target="_blank">{{title}}</a> by {{user.username}} on {{format_date created_at}}</span>
+        <span>
+            <a href="/post/{{id}}" target="_blank">{{title}}</a>
+            <p>by {{user.username}} on {{format_date created_at}}</p> 
+        </span>
     </div>
     <div class="post-text">
         <p>{{post_text}}</p>
     </div>
-    {{!-- {{#if comments.length}}
-    <section>
-        <h4>comments:</h4>
-        <ul>
-            {{#each comments as |comment|}}
-            <li>
-                {{> comments_text comment}}
-            </li>
-            {{/each}}
-        </ul>
-    </section>
-    {{/if}} --}}
 </article>
 
 <script src="/javascript/add-post.js"></script>
