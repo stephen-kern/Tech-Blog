@@ -15,7 +15,7 @@ const sequelize = require("./config/connection");
 // SET UP EXPRESS SESSION AND CONNECT TO SEQUELIZE DATABASE
 const SequelizeStore = require("connect-session-sequelize")(session.Store);
 const sess = {
-  secret: process.env.Secret,
+  secret: 'super secret secret',
   cookie: {},
   resave: false,
   saveUninitialized: true,
